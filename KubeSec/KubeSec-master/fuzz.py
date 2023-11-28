@@ -1,5 +1,5 @@
 from YAMLparser import checkIfWeirdYAML, keyMiner, checkIfValidK8SYaml, checkIfValidHelm, readYAMLAsStr
-
+import pytest
 # Fuzzing Method 1: checkIfWeirdYAML
 def test_checkIfWeirdYAML():
     # Test with valid YAML path
@@ -43,9 +43,5 @@ def test_readYAMLAsStr():
     assert isinstance(readYAMLAsStr('/path/to/invalid/file.txt'), str)
 
 
-# Run the tests
-test_checkIfWeirdYAML()
-test_keyMiner()
-test_checkIfValidK8SYaml()
-test_checkIfValidHelm()
-test_readYAMLAsStr()
+if __name__ == '__main__':
+    pytest.main()
