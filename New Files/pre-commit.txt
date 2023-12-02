@@ -1,0 +1,22 @@
+#!/bin/sh
+# PowerShell script to run Bandit and report security issues to a CSV file
+
+# Redirect output to a CSV file
+csvFile="security_report.csv"
+
+# Check only Python files
+changedPythonFiles=$(git diff --cached --name-only --diff-filter=ACMRTUXB | grep '\.py$')
+
+if [ -n "$changedPythonFiles" ]; then
+    echo "Running security analysis on changed Python files..."
+    bandit -r -f csv -o $csvFile $changedPythonFiles
+
+    if [ $? -ne 0 ]; then
+        echo "Security analysis found issues. Please fix them before committing."
+        exit 1
+    fi
+
+    echo "No security issues found."
+fi
+
+exit 0

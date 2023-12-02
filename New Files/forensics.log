@@ -1,0 +1,10 @@
+2023-11-29 12:09:19,161 Logging Statement: checkIfWeirdYAML
+2023-11-29 12:09:19,184 Logging Statement: readYAMLAsStr
+2023-11-29 12:10:16,396 Logging Statement: checkIfWeirdYAML
+2023-11-29 12:10:16,396 Logging Statement: readYAMLAsStr
+2023-11-29 12:10:16,396 Logging Statement: checkParseError
+2023-11-29 12:11:30,173 Logging Statement: checkIfWeirdYAML
+2023-11-29 12:11:30,194 Logging Statement: readYAMLAsStr
+2023-11-29 12:11:30,194 Logging Statement: checkParseError
+2023-11-29 12:11:30,194 Logging Statement: checkIfValidK8SYaml
+2023-11-29 12:11:30,194 Logging Statement: count_initial_comment_line
